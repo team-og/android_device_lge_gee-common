@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
 	kernel/lge/gee/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/lge/gee-common/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
 	device/lge/gee-common/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    device/lge/gee-common/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+        device/lge/gee-common/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
 	device/lge/gee-common/audio/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
@@ -82,6 +82,10 @@ PRODUCT_COPY_FILES += \
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
 	device/lge/gee-common/input/touch_dev.idc:system/usr/idc/touch_dev.idc
+
+# Prebuilt conn_init 
+PRODUCT_COPY_FILES += \
+	device/lge/gee-common/prebuilts/bin/conn_init:system/bin/conn_init
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -234,8 +238,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	bdAddrLoader \
-	libwfcu \
-	conn_init
+	libwfcu
 
 PRODUCT_PACKAGES += \
 	keystore.msm8960
